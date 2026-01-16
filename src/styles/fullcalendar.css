@@ -1,0 +1,88 @@
+/* FullCalendar - style par défaut, aucune personnalisation */
+
+
+.planning-card {
+  background: #d4e9d4;
+  border-radius: 4px;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.planning-header {
+  background: #c1ddc1;
+  border-bottom: 1px solid #b3d4b3;
+  padding: 4px 12px;
+  font-size: 12px;
+  text-align: right;
+  color: #355a3b;
+  font-weight: 600;
+}
+
+.planning-day-label {
+  text-transform: none;
+}
+
+.planning-calendar-container {
+  padding: 0 4px 4px;
+  background: transparent !important;
+}
+
+/* FullCalendar overrides pour un look "maquette" */
+
+.fc {
+  background: transparent !important;
+  border: none;
+}
+
+.fc .fc-scrollgrid {
+  border: none;
+  background: transparent !important;
+}
+
+.fc .fc-timegrid-slot,
+.fc .fc-timegrid-axis {
+  border-color: transparent;
+}
+
+.fc .fc-timegrid-slot {
+  height: 32px;
+  background: transparent !important;
+}
+
+.fc .fc-timegrid-axis-cushion,
+.fc .fc-timegrid-slot-label {
+  font-size: 10px;
+  color: #4b6c4f;
+}
+
+.fc .fc-timegrid-col-frame {
+  background-color: transparent !important;
+}
+
+.fc .fc-timegrid-event {
+  background: rgba(110, 169, 111, 0.6);
+  border: 1px solid #6ea96f;
+  border-radius: 0;
+  padding: 2px 4px;
+  font-size: 10px;
+  opacity: 0.7;
+}
+
+.fc .fc-timegrid-event .fc-event-time,
+.fc .fc-timegrid-event .fc-event-title {
+  font-size: 10px;
+}
+
+.fc .fc-timegrid-now-indicator-line {
+  border-color: #d9534f;
+}
+
+.fc .fc-timegrid-slot-minor {
+  border-top-style: dotted;
+}
+
+/* supprime header jour */
+.fc .fc-col-header {
+  display: none;
+}
