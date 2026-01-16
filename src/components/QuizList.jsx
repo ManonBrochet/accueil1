@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import api from '../api/axios';
-import Quiz from './Quiz';
 
 /**
  * Composant pour afficher la liste des quiz disponibles
@@ -9,7 +8,6 @@ function QuizList() {
   const [quizzes, setQuizzes] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [selectedQuiz, setSelectedQuiz] = useState(null);
 
   useEffect(() => {
     loadQuizzes();
@@ -31,40 +29,8 @@ function QuizList() {
   };
 
   const handleQuizSelect = (quiz) => {
-    setSelectedQuiz(quiz);
+    // Logique à implémenter si on clique sur un quiz
   };
-
-  const handleQuizComplete = () => {
-    setSelectedQuiz(null);
-    loadQuizzes(); // Recharger la liste après avoir terminé un quiz
-  };
-
-  const handleBack = () => {
-    setSelectedQuiz(null);
-  };
-
-  // Si un quiz est sélectionné, afficher le composant Quiz
-  if (selectedQuiz) {
-    return (
-      <div>
-        <button
-          onClick={handleBack}
-          style={{
-            marginBottom: '1rem',
-            padding: '0.5rem 1rem',
-            background: '#6c757d',
-            color: 'white',
-            border: 'none',
-            borderRadius: '4px',
-            cursor: 'pointer',
-          }}
-        >
-          ← Retour à la liste
-        </button>
-        <Quiz quizId={selectedQuiz.id} onComplete={handleQuizComplete} />
-      </div>
-    );
-  }
 
   if (loading) {
     return <div className="loading-text">Chargement des quiz...</div>;

@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import AuthService from '../services/AuthService';
 import api from '../api/axios';
-import CourseDownloadButton from './CourseDownloadButton';
 
 /**
  * Composant pour afficher la liste des cours
